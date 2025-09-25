@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "GamesInfo": "Data Source=.\\SQLEXPRESS;Initial Catalog=GamesInfo;Integrated Security=True"
+  }
+}

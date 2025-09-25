@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="FinalExam.AddPlayerPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FinalExam"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel>
+            <Grid Padding="4" Background="BlueViolet" Name="banner" Height="80" VerticalAlignment="Top">
+                <TextBlock Text="Add a new Player" FontSize="50" Foreground="LightGreen" FontFamily="Comic Sans MS" FontWeight="Bold" HorizontalAlignment="Center" Opacity="0.5"></TextBlock>
+            </Grid>
+            <Grid Background="MediumPurple" BorderBrush="BlueViolet" Height="60" VerticalAlignment="Top">
+                <Button Name="Back" Content="&lt;" FontSize="30" Foreground="White" Background="MediumPurple" HorizontalAlignment="Left" Click="Back_Click"></Button>
+                <TextBlock Text="Page 5 of 6" HorizontalAlignment="Center" FontSize="30" Foreground="White" VerticalAlignment="Center"></TextBlock>
+                <Button Name="Next" Content="&gt;" FontSize="30" Foreground="White" Background="MediumPurple" HorizontalAlignment="Right" Click="Next_Click"></Button>
+            </Grid>
+        </StackPanel>
+        <RelativePanel Background="Black" Margin="0,140,0,0">
+            <TextBlock Name="text1" Margin="20" Text="Enter Player Nickname:" FontSize="25" Foreground="White"></TextBlock>
+            <TextBox Name="textBox1" Height="40" FontSize="20" Background="DarkSlateBlue" Margin="20,0,20,20" RelativePanel.Below="text1" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" TextChanged="textBox_TextChanged"></TextBox>
+            <TextBlock Name="text2" Margin="20" Text="Enter Player Name:" FontSize="25" Foreground="White" RelativePanel.Below="textBox1"></TextBlock>
+            <TextBox Name="textBox2" Height="40" FontSize="20" Background="DarkSlateBlue" Margin="20,0,20,20" RelativePanel.Below="text2" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" TextChanged="textBox_TextChanged"></TextBox>
+            <TextBlock Name="text3" Margin="20" Text="Enter Player Surname:" FontSize="25" Foreground="White" RelativePanel.Below="textBox2"></TextBlock>
+            <TextBox Name="textBox3" Height="40" FontSize="20" Background="DarkSlateBlue" Margin="20,0,20,20" RelativePanel.Below="text3" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" TextChanged="textBox_TextChanged"></TextBox>
+            <Button Name="savePlayer" FontSize="25" RelativePanel.Below="textBox3" Content="Save Player" Background="Gray" Foreground="Black" Margin="20" IsEnabled="False" Click="savePlayer_Click"/>
+        </RelativePanel>
+    </Grid>
+</Page>
